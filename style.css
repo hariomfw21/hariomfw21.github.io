@@ -32,6 +32,11 @@ body{
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: fixed;
+  background-color: black;
+  padding-top: -10px;
+  padding-right: 70px;
+  margin-top: -10px;
 }
 
 nav ul li{
@@ -463,6 +468,16 @@ nav .fa-solid{
 
   .contact-left, .contact-rigth{
     flex-basis: 100%;
+  }
+
+  #resume-button-1{
+    padding: 0px
+  }
+
+  #nav-menu{
+    position: fixed;
+    background:black;
+   padding-top: 20px;
   }
 }
 
