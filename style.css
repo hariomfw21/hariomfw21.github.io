@@ -81,7 +81,7 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-  margin-top: 17%;
+  margin-top: 25%;
   font-size: 30px;
 }
 .header-text h1{
@@ -410,7 +410,7 @@ nav .fa-solid{
     background-image: url("./images/background-img\ small\ screen.jpg") ;
   }
   .header-text{
-    margin-top: 100%;
+    margin-top: 110%;
     font-size: 16px;
   }
 
