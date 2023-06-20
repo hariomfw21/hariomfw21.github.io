@@ -37,6 +37,7 @@ body{
   padding-top: -10px;
   padding-right: 70px;
   margin-top: -10px;
+  z-index: 9999;
 }
 
 nav ul li{
@@ -263,7 +264,7 @@ nav ul li a:hover::after{
 .project-card{
   border-radius: 12px;
   position: relative;
-  overflow: hidden;
+  z-index: 1;
 }
 .project-card img{
   width: 100%;
