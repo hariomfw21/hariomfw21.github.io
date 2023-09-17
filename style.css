@@ -252,6 +252,7 @@ nav ul li a:hover::after {
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
   margin-top: 50px;
+  background-color: #0f172a;
 }
 .image-container {
   width: 100%;
