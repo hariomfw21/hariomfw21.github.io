@@ -594,48 +594,49 @@
       }).then((r) => r.text());
     </script> -->
     <script>
-      const imageContainer = document.querySelector(".image-container");
-      const image = document.querySelector(".image-container img");
-      let scrollPosition = 0;
-      let scrollDirection = 1; // 1 for scrolling down, -1 for scrolling up
-      const scrollSpeed = 3; // Adjust the scroll speed as needed
-      const frameRate = 60; // Increase the frame rate for smoother animation
+      document
+        .querySelectorAll(".project-card .image-container")
+        .forEach((imageContainer) => {
+          const image = imageContainer.querySelector("img");
+          let scrollPosition = 0;
+          let scrollDirection = 1; // 1 for scrolling down, -1 for scrolling up
+          const scrollSpeed = 3; // Adjust the scroll speed as needed
+          let animationId = null;
 
-      let animationId = null;
+          function scrollImage() {
+            scrollPosition += scrollSpeed * scrollDirection;
+            image.style.transform = `translateY(-${scrollPosition}px)`;
 
-      function scrollImage() {
-        scrollPosition += scrollSpeed * scrollDirection;
-        image.style.transform = `translateY(-${scrollPosition}px)`;
+            if (
+              (scrollDirection === 1 &&
+                scrollPosition < image.height - imageContainer.clientHeight) ||
+              (scrollDirection === -1 && scrollPosition > 0)
+            ) {
+              // Continue scrolling until the end or top of the image
+              animationId = requestAnimationFrame(scrollImage);
+            } else if (animationId) {
+              // Stop the animation when it reaches the end or top
+              cancelAnimationFrame(animationId);
+              animationId = null;
+            }
+          }
 
-        if (
-          (scrollDirection === 1 &&
-            scrollPosition < image.height - imageContainer.clientHeight) ||
-          (scrollDirection === -1 && scrollPosition > 0)
-        ) {
-          // Continue scrolling until the end or top of the image
-          animationId = requestAnimationFrame(scrollImage);
-        } else if (animationId) {
-          // Stop the animation when it reaches the end or top
-          cancelAnimationFrame(animationId);
-          animationId = null;
-        }
-      }
+          imageContainer.addEventListener("mouseenter", () => {
+            if (!animationId) {
+              // Reset scroll position and start scrolling down when the mouse enters the image container
+              scrollPosition = 0;
+              scrollDirection = 1;
+              animationId = requestAnimationFrame(scrollImage);
+            }
+          });
 
-      imageContainer.addEventListener("mouseenter", () => {
-        if (!animationId) {
-          // Reset scroll position and start scrolling down when the mouse enters the image container
-          scrollPosition = 0;
-          scrollDirection = 1;
-          animationId = requestAnimationFrame(scrollImage);
-        }
-      });
-
-      imageContainer.addEventListener("mouseleave", () => {
-        if (animationId) {
-          // Change the scroll direction to scroll up when the mouse leaves the image container
-          scrollDirection = -1;
-        }
-      });
+          imageContainer.addEventListener("mouseleave", () => {
+            if (animationId) {
+              // Change the scroll direction to scroll up when the mouse leaves the image container
+              scrollDirection = -1;
+            }
+          });
+        });
     </script>
   </body>
 </html>
