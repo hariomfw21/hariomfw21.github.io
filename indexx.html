@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c428d53560.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+  </head>
+  <body>
+    <nav id="nav-menu">
+      <img
+        width="10%"
+        src="./images/Picsart_23-02-07_16-22-18-209.png"
+        alt="nameLogo"
+        class="logo"
+      />
+      <ul id="sidemenu">
+        <li>
+          <a class="nav-link home" onclick="closemenu()" href="#home">Home</a>
+        </li>
+        <li>
+          <a class="nav-link about" onclick="closemenu()" href="#about"
+            >About</a
+          >
+        </li>
+        <li>
+          <a class="nav-link skills" onclick="closemenu()" href="#skills"
+            >Skills</a
+          >
+        </li>
+        <li>
+          <a class="nav-link projects" onclick="closemenu()" href="#projects"
+            >Projects</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-link resume"
+            id="resume-button-1"
+            href="./images/Hariom_Kumar_Resume.pdf"
+            download="Hariom_Kumar_Resume"
+            onclick="window.open('https://drive.google.com/drive/u/0/folders/1dfjYJtkz2PnJ-tDLfs3Bd4FL19tThdmy')"
+            >Resume</a
+          >
+        </li>
+        <li>
+          <a class="nav-link contact" onclick="closemenu()" href="#contact"
+            >Contact</a
+          >
+        </li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div id="header">
+      <div class="container">
+        <div class="header-text" id="home">
+          <p>Backend Developer</p>
+          <h1 id="user-detail-name">Hi, I'm <span id="name"></span></h1>
+          <p id="country"></p>
+          <p id="role"></p>
+        </div>
+      </div>
+    </div>
+    <!-- .............about -->
+    <div id="about" class="about section">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img
+              class="home-img"
+              src="./images/myaboutImage-PhotoRoom.png-PhotoRoom.png"
+            />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p id="user-detail-intro">
+              Full Stack Web developer with considerable technical skills who
+              possess self-discipline and the ability to work with minimum
+              supervision. Looking forward to join a progressive organization
+              with opportunities to work on significant projects.
+            </p>
+
+            <div class="tab-title">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('resume')">Resume</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Backend Development</span><br />Good knowledge of
+                  Backend development with Node.js
+                </li>
+                <li>
+                  <span>MongoDB</span><br />200+hrs of MongoDB and MongoDB
+                  Aggration experience
+                </li>
+                <li>
+                  <span>MySql</span><br />100 hrs + working experience on MySql
+                  database
+                </li>
+                <li>
+                  <span>Frontend development</span><br />Frontend development
+                  with Html,CSS and Javascript , and knowledge about react as
+                  well
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Node.js</span><br />Good knowledge of Backend
+                  development with Node.js
+                </li>
+                <li>
+                  <span>Frontend development</span><br />Frontend development
+                  with Html,CSS and Javascript
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>Masai School Bengaluru</span><br />Full Stack Web
+                  Development - October 2022 - May 2023
+                </li>
+                <li>
+                  <span>St. Xavier's School Dalsinghsarai</span><br />Higher
+                  secondary Graduate - Completed in July 2022
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="resume">
+              <ul>
+                <li>
+                  <span>Download / View Resume form Here :</span><br />
+                  <a
+                    class="btn btn2"
+                    href="./images/Hariom_Kumar_Resume.pdf"
+                    id="resume-button-2"
+                    class="button resume"
+                    download="Hariom_Kumar_Resume"
+                    onclick="window.open('https://drive.google.com/drive/u/0/folders/1dfjYJtkz2PnJ-tDLfs3Bd4FL19tThdmy')"
+                    >Resume</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SKill -->
+    <div id="skills" style="padding: 30px 0">
+      <div class="container">
+        <h1 class="sub-title">Skills</h1>
+        <div class="skill-list">
+          <div class="skills-card">
+            <i class="fa-brands fa-node-js skills-card-img"></i>
+            <h2 class="skills-card-name">Node.Js</h2>
+          </div>
+
+          <div class="skills-card">
+            <i class="fa-brands fa-square-js skills-card-img"></i>
+            <h2 class="skills-card-name">Express.Js</h2>
+          </div>
+
+          <div class="skills-card">
+            <img
+              width="35%"
+              class="skills-card-img"
+              src="./images/monogodb.png"
+            />
+            <h2 class="skills-card-name">MongoDB</h2>
+            <!-- <a href="https://www.mongodb.com/">Learn more</a> -->
+          </div>
+
+          <div class="skills-card">
+            <i class="fa-brands fa-square-js skills-card-img"></i>
+            <h2 class="skills-card-name">Javascript</h2>
+            <!-- <a href="https://www.javascript.com/">Learn more</a> -->
+          </div>
+
+          <div class="skills-card">
+            <i class="fa-brands fa-html5 skills-card-img"></i>
+            <h2 class="skills-card-name">Html</h2>
+            <!-- <a href="https://html.com/">Learn more</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- projects -->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <!-- 1st project -->
+        <div class="project-card">
+          <div class="image-container">
+            <img src="./images/advd.png" alt="HealCare" />
+          </div>
+          <div class="project-description">
+            <div>
+              <h3 class="project-title">
+                HealCare <span class="project-date">( July 2023 )</span>
+              </h3>
+              <p class="project-description">
+                This project is a doctor appointment management system developed
+                in Node.js using Express. The system provides an interface for
+                users to book, cancel, and manage appointments with doctors. It
+                also allows admin users to manage user and doctor accounts
+              </p>
+              <div class="project-tech-stack">
+                <div>Node.Js</div>
+                <div>Express.js</div>
+                <div>
+                  <h3>HTML</h3>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                </div>
+                <div>
+                  <h3>Javascript</h3>
+                </div>
+                <div>MongoDB</div>
+              </div>
+              <div class="project-live-demo">
+                <div>
+                  <a
+                    class="project-github-link"
+                    href="https://github.com/hariomfw21/dandy-nation-9128"
+                    ><p>
+                      Code <span><i class="fa-brands fa-github"></i></span></p
+                  ></a>
+                </div>
+                <div>
+                  <a
+                    class="project-deployed-link"
+                    href="https://chimerical-lollipop-25cd16.netlify.app/"
+                  >
+                    <p>
+                      Live Demo
+                      <span
+                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                      ></span>
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2nd Project -->
+
+        <div class="project-card">
+          <div class="project-description">
+            <div>
+              <h3 class="project-title">
+                Seoux <span class="project-date">( June 2023 )</span>
+              </h3>
+              <p class="project-description">
+                Seoux is your scheduling automation platform for eliminating the
+                back-and-forth emails for finding the perfect time — and so much
+                more. It is a tool for scheduling appointments and events.
+              </p>
+              <div class="project-tech-stack">
+                <div>Node.Js</div>
+                <div>Express.js</div>
+                <div>
+                  <h3>HTML</h3>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                </div>
+                <div>
+                  <h3>Javascript</h3>
+                </div>
+                <div>MongoDB</div>
+              </div>
+              <div class="project-live-demo">
+                <div>
+                  <a
+                    class="project-github-link"
+                    href="https://github.com/hariomfw21/dandy-nation-9128"
+                    ><p>
+                      Code <span><i class="fa-brands fa-github"></i></span></p
+                  ></a>
+                </div>
+                <div>
+                  <a
+                    class="project-deployed-link"
+                    href="https://chimerical-lollipop-25cd16.netlify.app/"
+                  >
+                    <p>
+                      Live Demo
+                      <span
+                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                      ></span>
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="image-container">
+            <img src="./images/Seox (1).png" alt="Seox" />
+          </div>
+        </div>
+        <!-- 3rd Project -->
+
+        <div class="project-card">
+          <div class="image-container">
+            <img src="./images/mailchimpfullpage (2).png" alt="mailchimp" />
+          </div>
+          <div class="project-description">
+            <div>
+              <h3 class="project-title">
+                MailChamp <span class="project-date">( April 2023 )</span>
+              </h3>
+              <p class="project-description">
+                Mailchimp is an all-in-one marketing platform that helps you
+                manage and talk to your clients, customers, and other interested
+                parties. Our approach to marketing focuses on healthy contact
+                management practices, beautifully designed campaigns, and
+                powerful data analysis.
+              </p>
+              <div class="project-tech-stack">
+                <div>
+                  <h3>HTML</h3>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                </div>
+                <div>
+                  <h3>Javascript</h3>
+                </div>
+              </div>
+              <div class="project-live-demo">
+                <div>
+                  <a
+                    class="project-github-link"
+                    href="https://github.com/hariomfw21/dandy-nation-9128"
+                    ><p>
+                      Code <span><i class="fa-brands fa-github"></i></span></p
+                  ></a>
+                </div>
+                <div>
+                  <a
+                    class="project-deployed-link"
+                    href="https://chimerical-lollipop-25cd16.netlify.app/"
+                  >
+                    <p>
+                      Live Demo
+                      <span
+                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                      ></span>
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4th Project-->
+        <div class="project-card">
+          <div class="project-description">
+            <div>
+              <h3 class="project-title">
+                Vetspot <span class="project-date">( July 2023 )</span>
+              </h3>
+              <p class="project-description">
+                The Vetspot Website is a comprehensive solution designed to
+                streamline and optimize the operations of a veterinary clinic.
+              </p>
+              <div class="project-tech-stack">
+                <div>Node.Js</div>
+                <div>Redis</div>
+                <div>MongoDB</div>
+                <div>
+                  <h3>HTML</h3>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                </div>
+                <div>
+                  <h3>Javascript</h3>
+                </div>
+              </div>
+              <div class="project-live-demo">
+                <div>
+                  <a
+                    class="project-github-link"
+                    href="https://github.com/hariomfw21/dandy-nation-9128"
+                    ><p>
+                      Code <span><i class="fa-brands fa-github"></i></span></p
+                  ></a>
+                </div>
+                <div>
+                  <a
+                    class="project-deployed-link"
+                    href="https://chimerical-lollipop-25cd16.netlify.app/"
+                  >
+                    <p>
+                      Live Demo
+                      <span
+                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                      ></span>
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="image-container">
+            <img src="./images/Vetnory.png" alt="Seox" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- github -->
+    <div id="github">
+      <div class="container">
+        <h2 class="sub-title">
+          <span style="color: rgb(18, 194, 18)">Github</span> Stats
+        </h2>
+        <div class="work-list stats">
+          <div>
+            <img
+              id="github-top-langs"
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=hariomfw21&lans-count=4"
+              alt=""
+            />
+          </div>
+
+          <div id="statsimg">
+            <img
+              id="github-stats-card"
+              src="https://github-readme-stats.vercel.app/api?username=hariomfw21&show_icons=true&locale=en"
+              alt=""
+            />
+            <img
+              id="github-streak-stats"
+              src="https://github-readme-streak-stats.herokuapp.com?user=hariomfw21&"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div id="calendar">
+          <h2 class="textforcalender">
+            <span style="color: rgb(18, 194, 18)">Github</span>
+            <span> Calendar</span>
+          </h2>
+          <div class="react-activity-calendar calendar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contacts -->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p id="contact-email">
+              <i class="fa-solid fa-paper-plane"></i>hariomkim53@gmail.com
+            </p>
+            <p id="contact-phone">
+              <i class="fa-solid fa-square-phone"></i>8804789199
+            </p>
+            <div class="social-icons">
+              <a
+                id="contact-linkedin"
+                href="https://www.linkedin.com/in/hariomkr/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a id="contact-github" href="https://github.com/hariomfw21"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontains = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontain of tabcontains) {
+          tabcontain.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      var i = 0;
+      var j = 0;
+      var text1 = "Hariom";
+      var text2 = "From India.";
+      var text3 = "I'm a Full-Stack Web Developer.";
+      var speed = 100; // adjust speed as needed
+
+      function typeWriter() {
+        if (i < text1.length) {
+          document.getElementById("name").innerHTML += text1.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        } else if (j < text2.length) {
+          document.getElementById("country").innerHTML += text2.charAt(j);
+          j++;
+          setTimeout(typeWriter, speed);
+        } else {
+          document.getElementById("role").innerHTML += text3.charAt(
+            j - text2.length
+          );
+          if (j < text2.length + text3.length) {
+            j++;
+            setTimeout(typeWriter, speed);
+          } else {
+            document.getElementById("name").innerHTML = "";
+            document.getElementById("country").innerHTML = "";
+            document.getElementById("role").innerHTML = "";
+            i = 0;
+            j = 0;
+            setTimeout(typeWriter, speed);
+          }
+        }
+      }
+
+      window.onload = typeWriter;
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+    <!-- <script>
+      GitHubCalendar(".calendar", "hariomfw21");
+
+      // or enable responsive functionality:
+      GitHubCalendar(".calendar", "hariomfw21", { responsive: true });
+
+      // // Use a proxy
+      GitHubCalendar(".calendar", "hariomfw21", {
+        proxy(username) {
+          return fetch(`https://your-proxy.com/github?user=${username}`);
+        },
+      }).then((r) => r.text());
+    </script> -->
+    <script>
+      document
+        .querySelectorAll(".project-card .image-container")
+        .forEach((imageContainer) => {
+          const image = imageContainer.querySelector("img");
+          let scrollPosition = 0;
+          let scrollDirection = 1; // 1 for scrolling down, -1 for scrolling up
+          const scrollSpeed = 3; // Adjust the scroll speed as needed
+          let animationId = null;
+
+          function scrollImage() {
+            scrollPosition += scrollSpeed * scrollDirection;
+            image.style.transform = `translateY(-${scrollPosition}px)`;
+
+            if (
+              (scrollDirection === 1 &&
+                scrollPosition < image.height - imageContainer.clientHeight) ||
+              (scrollDirection === -1 && scrollPosition > 0)
+            ) {
+              // Continue scrolling until the end or top of the image
+              animationId = requestAnimationFrame(scrollImage);
+            } else if (animationId) {
+              // Stop the animation when it reaches the end or top
+              cancelAnimationFrame(animationId);
+              animationId = null;
+            }
+          }
+
+          imageContainer.addEventListener("mouseenter", () => {
+            if (!animationId) {
+              // Reset scroll position and start scrolling down when the mouse enters the image container
+              scrollPosition = 0;
+              scrollDirection = 1;
+              animationId = requestAnimationFrame(scrollImage);
+            }
+          });
+
+          imageContainer.addEventListener("mouseleave", () => {
+            if (animationId) {
+              // Change the scroll direction to scroll up when the mouse leaves the image container
+              scrollDirection = -1;
+            }
+          });
+        });
+    </script>
+  </body>
+</html>
