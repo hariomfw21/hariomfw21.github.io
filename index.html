@@ -47,7 +47,7 @@
         <li>
           <a
             class="nav-link resume"
-            id="resume-button-1"
+            id="resume-link-1"
             href="./images/Hariom Kumar-Full Stack Web Developer.pdf"
             download="Hariom_Kumar_Resume"
             target="_blank"
@@ -63,13 +63,22 @@
       </ul>
       <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </nav>
+    <!--------------------------------------Header ------------------------------------->
     <div id="header">
       <div class="container">
         <div class="header-text" id="home">
-          <p>Backend Developer</p>
-          <h1 id="user-detail-name">Hi, I'm <span id="name"></span></h1>
-          <p id="country"></p>
-          <p id="role"></p>
+          <div class="home-info">
+            <p>Backend Developer</p>
+            <h1 id="user-detail-name">Hi, I'm <span id="name"></span></h1>
+            <p id="country"></p>
+            <p id="role"></p>
+          </div>
+          <div class="home-image">
+            <img
+              class="home-img"
+              src="./images/myaboutImage-PhotoRoom.png-PhotoRoom.png"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -155,10 +164,9 @@
                   <a
                     class="btn btn2"
                     href="./images/Hariom Kumar-Full Stack Web Developer.pdf"
-                    id="resume-button-2"
+                    id="resume-link-2"
                     class="button resume"
                     download="Hariom_Kumar_Resume"
-                    target="_blank"
                     >Resume</a
                   >
                 </li>
@@ -205,6 +213,62 @@
       <div class="container">
         <h1 class="sub-title">My Projects</h1>
         <!-- 1st project -->
+        <div class="project-card">
+          <div class="project-description">
+            <div>
+              <h3 class="project-title">
+                Seoux <span class="project-date">( June 2023 )</span>
+              </h3>
+              <p class="project-description">
+                Seoux is your scheduling automation platform for eliminating the
+                back-and-forth emails for finding the perfect time — and so much
+                more. It is a tool for scheduling appointments and events.
+              </p>
+              <div class="project-tech-stack">
+                <div>Node.Js</div>
+                <div>Express.js</div>
+                <div>
+                  <h3>HTML</h3>
+                </div>
+                <div>
+                  <h3>CSS</h3>
+                </div>
+                <div>
+                  <h3>Javascript</h3>
+                </div>
+                <div>MongoDB</div>
+              </div>
+              <div class="project-live-demo">
+                <div>
+                  <a
+                    class="project-github-link"
+                    href="https://github.com/hariomfw21/dandy-nation-9128"
+                    ><p>
+                      Code <span><i class="fa-brands fa-github"></i></span></p
+                  ></a>
+                </div>
+                <div>
+                  <a
+                    class="project-deployed-link"
+                    href="https://chimerical-lollipop-25cd16.netlify.app/"
+                  >
+                    <p>
+                      Live Demo
+                      <span
+                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                      ></span>
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="image-container">
+            <img src="./images/Seox (1).png" alt="Seox" />
+          </div>
+        </div>
+
+        <!-- 2nd Project -->
         <div class="project-card">
           <div class="image-container">
             <img src="./images/advd.png" alt="HealCare" />
@@ -261,62 +325,6 @@
           </div>
         </div>
 
-        <!-- 2nd Project -->
-
-        <div class="project-card">
-          <div class="project-description">
-            <div>
-              <h3 class="project-title">
-                Seoux <span class="project-date">( June 2023 )</span>
-              </h3>
-              <p class="project-description">
-                Seoux is your scheduling automation platform for eliminating the
-                back-and-forth emails for finding the perfect time — and so much
-                more. It is a tool for scheduling appointments and events.
-              </p>
-              <div class="project-tech-stack">
-                <div>Node.Js</div>
-                <div>Express.js</div>
-                <div>
-                  <h3>HTML</h3>
-                </div>
-                <div>
-                  <h3>CSS</h3>
-                </div>
-                <div>
-                  <h3>Javascript</h3>
-                </div>
-                <div>MongoDB</div>
-              </div>
-              <div class="project-live-demo">
-                <div>
-                  <a
-                    class="project-github-link"
-                    href="https://github.com/hariomfw21/dandy-nation-9128"
-                    ><p>
-                      Code <span><i class="fa-brands fa-github"></i></span></p
-                  ></a>
-                </div>
-                <div>
-                  <a
-                    class="project-deployed-link"
-                    href="https://chimerical-lollipop-25cd16.netlify.app/"
-                  >
-                    <p>
-                      Live Demo
-                      <span
-                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
-                      ></span>
-                    </p>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/Seox (1).png" alt="Seox" />
-          </div>
-        </div>
         <!-- 3rd Project -->
 
         <div class="project-card">
@@ -430,7 +438,7 @@
       </div>
     </div>
     <!--------------------------------------GitHub---------------------------------->
-    <!-- <div id="github">
+    <div id="github">
       <div class="container">
         <h2 class="sub-title">
           <span style="color: rgb(18, 194, 18)">Github</span> Stats
@@ -466,9 +474,9 @@
           <div class="react-activity-calendar calendar"></div>
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <div id="github">
+    <!-- <div id="github">
       <h1>GitHub Stats</h1>
       <div class="react-activity-calendar"></div>
       <div id="github-stats">
@@ -496,7 +504,7 @@
           />
         </div>
       </div>
-    </div>
+    </div> -->
     <!--------------------------------------Contact----------------------------------->
     <div id="contact">
       <div class="container">

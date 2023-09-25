@@ -78,10 +78,22 @@ nav ul li a:hover::after {
   border: black;
 }
 
-.header-text {
-  margin-top: 25%;
+#home {
+  display: flex;
+}
+
+.home-info {
+  width: 100%;
+  margin-top: 20%;
   font-size: 30px;
 }
+
+.home-image {
+  width: 90%;
+  margin-top: 15%;
+  margin-left: 10%;
+}
+
 .header-text h1 {
   font-size: 60px;
   margin-top: 20px;
@@ -89,6 +101,12 @@ nav ul li a:hover::after {
 
 .header-text h1 span {
   color: #ff004f;
+}
+
+.home-img {
+  width: 70%;
+  background-color: #1e293b;
+  border-radius: 10%;
 }
 
 /* about---------------- */
@@ -173,10 +191,9 @@ nav ul li a:hover::after {
 
 /* skills */
 
-
 .skill-list {
   display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
 }
@@ -191,7 +208,6 @@ nav ul li a:hover::after {
   border-radius: 10px;
   transition: background 0.5s, transform 0.5s;
 }
-
 
 .skill-list div i {
   font-size: 50px;
@@ -440,8 +456,23 @@ nav .fa-solid {
 }
 
 @media only screen and (max-width: 600px) {
+  #home {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .home-info {
+    width: 100%;
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-img {
+    width: 90%;
+  }
+
   .header-text {
-    margin-top: 110%;
     font-size: 16px;
   }
 
@@ -510,6 +541,13 @@ nav .fa-solid {
   #nav-menu {
     position: fixed;
     background-color: #1e293b;
+  }
+  /* skill list */
+
+  .skill-list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
 
