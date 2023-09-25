@@ -313,7 +313,7 @@ nav ul li a:hover::after {
 
 .project-tech-stack {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 10px;
   margin-top: 20px;
   cursor: pointer;
@@ -459,6 +459,7 @@ nav .fa-solid {
   #home {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 30px;
   }
 
   .home-info {
@@ -541,6 +542,7 @@ nav .fa-solid {
   #nav-menu {
     position: fixed;
     background-color: #1e293b;
+    padding: 20px;
   }
   /* skill list */
 
@@ -549,6 +551,49 @@ nav .fa-solid {
     width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
+
+  /* project */
+  .project-card {
+    box-shadow: rgba(224, 216, 216, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+    margin-top: 50px;
+    background-color: #0f172a;
+  }
+
+  .project-tech-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .project-tech-stack > div {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: #1e293b;
+  }
+  .project-github-link {
+    text-decoration: none;
+    color: white;
+    font-size: small;
+  }
+
+  .project-deployed-link {
+    text-decoration: none;
+    color: white;
+    font-size: small;
+  }
+
 }
 
 #msg {
