@@ -149,7 +149,7 @@ nav ul li a:hover::after {
   font-size: large;
   font-weight: bolder;
   color: #758297;
-  line-height:2rem;
+  line-height: 2rem;
 }
 .sub-title {
   margin-bottom: 30px;
@@ -290,6 +290,10 @@ nav ul li a:hover::after {
   position: relative; /* Allows us to absolutely position the image inside */
 }
 
+.project-card:nth-child(even) .image-container {
+  order: 1;
+}
+
 .image-container img {
   width: 100%; /* Make the image take up the full width of the container */
   height: auto; /* Maintain the image's aspect ratio */
@@ -322,9 +326,8 @@ nav ul li a:hover::after {
 }
 .project-description > div > p {
   color: slategray;
-  letter-spacing: 0.5px;
   text-align: center;
-  word-spacing: 5px;
+  line-height: 1.5rem;
 }
 
 .project-tech-stack {
@@ -578,6 +581,10 @@ nav .fa-solid {
     gap: 40px;
     margin-top: 50px;
     background-color: #0f172a;
+  }
+
+  .image-container {
+    order: 2;
   }
 
   .project-tech-stack {
