@@ -4,12 +4,7 @@ var j = 0;
 var text1 = "Hariom";
 var text2 = "From India.";
 var text3 = "I'm a Full-Stack Web Developer.";
-var speed = 100;
-
-// Function to start the typing animation
-function startTypingAnimation() {
-  typeWriter(); // Start the typing animation
-}
+var speed = 100; 
 
 function typeWriter() {
   if (i < text1.length) {
@@ -25,13 +20,18 @@ function typeWriter() {
     if (j < text2.length + text3.length) {
       j++;
       setTimeout(typeWriter, speed);
+    } else {
+      document.getElementById("name").innerHTML = "";
+      document.getElementById("country").innerHTML = "";
+      document.getElementById("role").innerHTML = "";
+      i = 0;
+      j = 0;
+      setTimeout(typeWriter, speed);
     }
   }
 }
 
-// Start the typing animation when the DOM is ready
-document.addEventListener("DOMContentLoaded", startTypingAnimation);
-
+window.onload = typeWriter;
 
 // <---------------------------------------Scrool View for Projects ------------------------------------------------->
 document
