@@ -15,6 +15,29 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
+    <!-- Favicon Images -->
+    <link
+      rel="shortcut icon"
+      href="https://th.bing.com/th/id/OIP.KJqSaHWn8XrXZmP9fPT0zwHaHa?pid=ImgDet&rs=1"
+      type="image/x-icon"
+    />
+
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
+      integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!--------------------------------------Nav ------------------------------------->
@@ -68,12 +91,21 @@
       <div class="container">
         <div class="header-text" id="home">
           <div class="home-info">
-            <p>Full-Stack Developer</p>
-            <h1 id="user-detail-name">Hi, I'm <span id="name"></span></h1>
-            <p id="country"></p>
-            <br />
-            <p id="role"></p>
+            <div class="intro-info">
+              <p>Full-Stack Developer</p>
+              <h1 id="user-detail-name">Hi, I'm <span id="name"></span></h1>
+              <p id="country"></p>
+              <br />
+              <p id="role"></p>
+            </div>
+            <div id="resume-button-2">
+              <h3>
+                Resume <span><i class="uil uil-message nav_icon"> </i></span>
+              </h3>
+              
+            </div>
           </div>
+
           <div class="home-image">
             <img
               class="home-img"
@@ -186,37 +218,277 @@
       </div>
     </div>
     <!--------------------------------------Skills------------------------------------>
-    <div id="skills" style="padding: 30px 0">
-      <div class="container">
-        <h1 class="sub-title">Skills</h1>
-        <div class="skill-list">
-          <div class="skills-card">
-            <i class="fa-brands fa-node-js skills-card-img"></i>
-            <h2 class="skills-card-name">Node.Js</h2>
+    <section class="skills section" id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+
+      <div class="skills-container bd-grid">
+        <!-- Languages -->
+        <div>
+          <h2 class="skills-subtitle">Languages</h2>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.I5XOh9o_kbTNsXnsIc53aAHaHa?w=190&h=190&c=7&r=0&o=5&pid=1.7"
+              />
+              <span class="skills-card-name">JavaScript</span>
+            </div>
           </div>
-          <div class="skills-card">
-            <i class="fa-brands fa-square-js skills-card-img"></i>
-            <h2 class="skills-card-name">Express.Js</h2>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.uyCMNGgRy6YmnnuveGKaNAAAAA?pid=ImgDet&rs=1"
+              />
+              <span class="skills-card-name">TypeScript</span>
+            </div>
           </div>
-          <div class="skills-card">
-            <img
-              width="35%"
-              class="skills-card-img"
-              src="./images/monogodb.png"
-            />
-            <h2 class="skills-card-name">MongoDB</h2>
+        </div>
+
+        <!-- Frontend -->
+        <div>
+          <h2 class="skills-subtitle">Front-End</h2>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.FN170sbF2Xwk3JZ5OEPxAwHaHs?w=190&h=197&c=7&r=0&o=5&pid=1.7"
+              />
+              <span class="skills-card-name">HTML5</span>
+            </div>
           </div>
-          <div class="skills-card">
-            <i class="fa-brands fa-square-js skills-card-img"></i>
-            <h2 class="skills-card-name">Javascript</h2>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.NccvSu6Gut1HXGwUTBKYKgHaH3?w=167&h=180&c=7&r=0&o=5&pid=1.7"
+              />
+              <span class="skills-card-name">CSS3</span>
+            </div>
           </div>
-          <div class="skills-card">
-            <i class="fa-brands fa-html5 skills-card-img"></i>
-            <h2 class="skills-card-name">Html</h2>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.I5XOh9o_kbTNsXnsIc53aAHaHa?w=190&h=190&c=7&r=0&o=5&pid=1.7"
+              />
+              <span class="skills-card-name">JavaScript</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.K-4RqDC6zFrpAG31ayDDOgHaHa?w=171&h=180&c=7&r=0&o=5&pid=1.7"
+              />
+              <span class="skills-card-name">React.js (Intermediate)</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.lRb07N34hcsNKufxVWkFoAAAAA?w=150&h=150&c=7&r=0&o=5&pid=1.7"
+              />
+              <span class="skills-card-name">Chakra UI (Basic)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div>
+          <h2 class="skills-subtitle">Back-End</h2>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.DghipJR-YrsMGAeCx9P7AQHaHa?w=189&h=189&c=7&r=0&o=5&pid=1.7"
+              />
+              <span class="skills-card-name">Node.js</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.1fZjQpkRMKTBGN_7H5YnFwHaGL?pid=ImgDet&rs=1"
+              />
+              <span class="skills-card-name">Express.js</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="/Assets/icons/dsa.png"
+              />
+              <span class="skills-card-name">Data Structures & Algo.</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://i1.wp.com/artificialintelligencestechnology.com/wp-content/uploads/2020/03/Logo.png?fit=4167%2C4167&ssl=1"
+              />
+              <span class="skills-card-name">Generative AI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div>
+          <h2 class="skills-subtitle">Databases</h2>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.iJDKjEJBWEErGdYeo5zsfAHaHa?pid=ImgDet&w=205&h=205&c=7"
+              />
+              <span class="skills-card-name">MongoDB</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="/Assets/icons/sql.png"
+                alt=""
+              />
+              <span class="skills-card-name">MySQL </span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://cdn4.iconfinder.com/data/icons/redis-2/1451/Untitled-2-512.png"
+                alt="Redis"
+              />
+              <span class="skills-card-name">Redis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- General Tools -->
+        <div>
+          <h2 class="skills-subtitle">General Tools</h2>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.ckeUFk-yid0vfWnd56w7wAHaHa?w=185&h=185&c=7&r=0&o=5&pid=1.7"
+              />
+              <span class="skills-card-name">Git, GitHub</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://user-images.githubusercontent.com/674621/71187801-14e60a80-2280-11ea-94c9-e56576f76baf.png"
+              />
+              <span class="skills-card-name">VS Code</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://cdn-1.webcatalog.io/catalog/replit/replit-icon-filled.png"
+              />
+              <span class="skills-card-name">Replit</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.MeHy0e0_nwQ9NMwBCGXTxgHaHa?w=197&h=197&c=7&r=0&o=5&pid=1.7"
+              />
+              <span class="skills-card-name">CodePen & CodeSandbox</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.hsFAu-BJBv7dM-FYsp7p6gHaHa?pid=ImgDet&w=800&h=800&rs=1"
+              />
+              <span class="skills-card-name">ChatGPT</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://magoven.io/wp-content/uploads/2023/05/Google-Bard-Logo.png"
+              />
+              <span class="skills-card-name">Bard</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deployment Tools -->
+        <div>
+          <h2 class="skills-subtitle">Deployment Tools</h2>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://th.bing.com/th/id/OIP.tFl-8wQUENETYLjX5mYWuAHaD4?w=280&h=180&c=7&r=0&o=5&pid=1.7"
+              />
+              <span class="skills-card-name">AWS (EC2 or Any)</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_477db83f729d63210139ec7cd29c1351/render-render.png"
+              />
+              <span class="skills-card-name">Render</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://camo.githubusercontent.com/df61f4b2e2cc40922b5290ed53040485ab7167836872ce1aa88d88462e9816ce/68747470733a2f2f7261696c7761792e6170702f6272616e642f6c6f676f2d6c696768742e706e67"
+              />
+              <span class="skills-card-name">Railway</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://web700.ca/media/cyclic-logo.png"
+              />
+              <span class="skills-card-name">Cyclic</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://static-00.iconduck.com/assets.00/netlify-icon-512x512-p4tqk3ec.png"
+              />
+              <span class="skills-card-name">Netlify</span>
+            </div>
+          </div>
+          <div class="skills-data">
+            <div class="skills-card">
+              <img
+                class="skills-card-img skills-icon"
+                src="https://cdn.jsdelivr.net/gh/wuzhiguang1/bolgfile@1.8/tool/static/picture/hfe6251603ed446848e99364bafeff3d7n.png"
+              />
+              <span class="skills-card-name">Vercel</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!--------------------------------------Projects---------------------------------->
     <div id="projects">
       <div class="container">
@@ -255,7 +527,7 @@
                 <div>
                   <a
                     class="project-github-link"
-                    href="https://github.com/hariomfw21/dandy-nation-9128"
+                    href="https://github.com/hariomfw21/Seoux---Your-Personal-Beauty-Appointment-Scheduler."
                     ><p>
                       Code <span><i class="fa-brands fa-github"></i></span></p
                   ></a>
@@ -263,7 +535,7 @@
                 <div>
                   <a
                     class="project-deployed-link"
-                    href="https://chimerical-lollipop-25cd16.netlify.app/"
+                    href="https://sweet-biscochitos-2fe8b6.netlify.app/"
                   >
                     <p>
                       Live
@@ -312,7 +584,7 @@
                 <div>
                   <a
                     class="project-github-link"
-                    href="https://github.com/hariomfw21/dandy-nation-9128"
+                    href="https://github.com/hariomfw21/HealCare-Doctor-Appointment-booking-web-app"
                     ><p>
                       Code <span><i class="fa-brands fa-github"></i></span></p
                   ></a>
@@ -367,7 +639,7 @@
                 <div>
                   <a
                     class="project-github-link"
-                    href="https://github.com/hariomfw21/dandy-nation-9128"
+                    href="https://github.com/hariomfw21/Vetspot_veterinary-clinic_website"
                     ><p>
                       Code <span><i class="fa-brands fa-github"></i></span></p
                   ></a>
@@ -375,7 +647,7 @@
                 <div>
                   <a
                     class="project-deployed-link"
-                    href="https://chimerical-lollipop-25cd16.netlify.app/"
+                    href="https://vetspot.vercel.app/"
                   >
                     <p>
                       Live
@@ -422,7 +694,7 @@
                 <div>
                   <a
                     class="project-github-link"
-                    href="https://github.com/hariomfw21/dandy-nation-9128"
+                    href="https://github.com/hariomfw21/Mailchimp--Email-Markating-Web-App"
                     ><p>
                       Code <span><i class="fa-brands fa-github"></i></span></p
                   ></a>
@@ -484,36 +756,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div id="github">
-      <h1>GitHub Stats</h1>
-      <div class="react-activity-calendar"></div>
-      <div id="github-stats">
-        <div>
-          <img
-            id="github-top-langs"
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=hariomfw21&theme=radical&hide_border=false&include_all_commits=true&count_private=true&layout=compact"
-            alt="Hariom"
-          />
-        </div>
-        <div>
-          <img
-            id="github-stats-card"
-            src="https://github-readme-stats.vercel.app/api?username=hariomfw21&theme=radical&hide_border=false&include_all_commits=true&count_private=true
-              "
-            alt="Hariom"
-          />
-        </div>
-        <div>
-          <img
-            id="github-streak-stats"
-            src="https://github-readme-streak-stats.herokuapp.com/?user=hariomfw21&theme=radical&hide_border=false
-              "
-            alt="Hariom"
-          />
-        </div>
-      </div>
-    </div> -->
     <!--------------------------------------Contact----------------------------------->
     <div id="contact">
       <div class="container">
